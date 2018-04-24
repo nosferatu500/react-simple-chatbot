@@ -18,9 +18,18 @@ const otherFontTheme = {
 
 const steps = [
   {
-    id: '1',
+    id: '0',
     message: 'Hello World',
-    end: true,
+    trigger: '1',
+  },
+  {
+    id: '1',
+    user: true,
+    trigger: '2',
+  },
+  {
+    id: '2',
+    user: true,
   },
 ];
 

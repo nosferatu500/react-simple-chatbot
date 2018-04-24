@@ -12,7 +12,7 @@ const Bubble = styled.div`
     } else if (!isFirst && isLast) {
       return user ? '18px 0 18px 18px' : '0 18px 18px 18px';
     }
-    return props.user ? '18px 18px 0 18px' : '18px 18px 18px 0';
+    return props.user ? '50px 0px 50px 50px' : '0px 50px 50px 50px';
   }};
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
   color: ${props => (props.user ? props.theme.userFontColor : props.theme.botFontColor)};
