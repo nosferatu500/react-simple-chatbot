@@ -14,6 +14,7 @@ const Bubble = styled.div`
     }
     return props.user ? '50px 0px 50px 50px' : '0px 50px 50px 50px';
   }};
+  border: ${props => props.user ? '1px solid rgba(75, 64, 176, 0.5)' : ''};
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
   color: ${props => (props.user ? props.theme.userFontColor : props.theme.botFontColor)};
   display: inline-block;
