@@ -500,6 +500,13 @@ class ChatBot extends Component {
       style,
       submitButtonStyle,
       width,
+
+      second,
+      title,
+      days,
+      time,
+      img,
+      contact,
     } = this.props;
 
     const header = headerComponent || (
@@ -537,14 +544,30 @@ class ChatBot extends Component {
           width={width}
         >
           {!hideHeader && header}
-          <Content
-            className="rsc-content"
-            innerRef={contentRef => (this.content = contentRef)}
-            floating={floating}
-            style={contentStyle}
-          >
-            {_.map(renderedSteps, this.renderStep)}
-          </Content>
+          <div style={{ display: !second ? 'block' : 'none' }}>
+            <Content
+              className="rsc-content"
+              innerRef={contentRef => (this.content = contentRef)}
+              floating={floating}
+              style={contentStyle}
+            >
+              {_.map(renderedSteps, this.renderStep)}
+            </Content>
+          </div>
+          <div style={{ display: second ? 'block' : 'none' }}>
+            <Content
+              className="rsc-content"
+              innerRef={contentRef => (this.content = contentRef)}
+              floating={floating}
+              style={contentStyle}
+            >
+              <div>{title}</div>
+              <div>{days}</div>
+              <div>{time}</div>
+              {img}
+              <div>{contact}</div>
+            </Content>
+          </div>
           <Footer className="rsc-footer" style={footerStyle}>
             <Input
               type="textarea"
@@ -609,6 +632,12 @@ ChatBot.propTypes = {
   steps: PropTypes.array.isRequired,
   style: PropTypes.object,
   submitButtonStyle: PropTypes.object,
+  second: PropTypes.bool,
+  title: PropTypes.string,
+  days: PropTypes.string,
+  time: PropTypes.string,
+  img: PropTypes.element,
+  contact: PropTypes.string,
   userAvatar: PropTypes.string,
   userDelay: PropTypes.number,
   width: PropTypes.string,
@@ -641,6 +670,12 @@ ChatBot.defaultProps = {
   recognitionPlaceholder: 'Listening ...',
   style: {},
   submitButtonStyle: {},
+  second: false,
+  title: 'You can reach us by phone',
+  days: 'Mo - Fr',
+  time: '9:00 - 18:00',
+  img: <img alt={'img'} />,
+  contact: '+ 420 353 14370969',
   toggleFloating: undefined,
   userDelay: 1000,
   width: '350px',
