@@ -561,11 +561,43 @@ class ChatBot extends Component {
               floating={floating}
               style={contentStyle}
             >
-              <div>{title}</div>
-              <div>{days}</div>
-              <div>{time}</div>
+              <div style={{
+                marginTop: '50px',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                lineHeight: '20px',
+                fontSize: '17px',
+                textAlign: 'center',
+              }}
+              >{title}</div>
+              <div style={{
+                marginTop: '15px',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                lineHeight: '20px',
+                fontSize: '16px',
+                textAlign: 'center',
+              }}
+              >{days}</div>
+              <div style={{
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                lineHeight: 'normal',
+                fontSize: '27px',
+                textAlign: 'center',
+                marginBottom: '40px',
+              }}
+              >{time}</div>
               {img}
-              <div>{contact}</div>
+              <div style={{
+                marginTop: '15px',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                lineHeight: 'normal',
+                fontSize: '27px',
+                textAlign: 'center',
+              }}
+              >{contact}</div>
             </Content>
           </div>
           <Footer className="rsc-footer" style={footerStyle}>
@@ -597,7 +629,7 @@ class ChatBot extends Component {
             )}
           </Footer>
         </ChatBotContainer>
-      </div>
+      </div >
     );
   }
 }
