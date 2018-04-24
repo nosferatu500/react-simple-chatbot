@@ -9,11 +9,11 @@ const ChatBotContainer = styled.div`
   overflow: hidden;
   position: ${props => props.floating ? 'fixed' : 'relative'};
   bottom: ${props => props.floating ? '32px' : 'initial'};
-  right: ${props => props.floating ? '32px' : 'initial'};
+  left: ${props => props.floating ? '32px' : 'initial'};
   width: ${props => props.width};
   z-index: 999;
   transform: ${props => props.opened ? 'scale(1)' : 'scale(0)'};
-  transform-origin: bottom right;
+  transform-origin: bottom left;
   transition: transform .3s ease;
 
   @media screen and (max-width: 568px) {

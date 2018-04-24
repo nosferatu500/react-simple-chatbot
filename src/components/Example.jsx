@@ -12,7 +12,8 @@ const otherFontTheme = {
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
-  left: '56px',
+  floatLeft: '56px',
+  floatBottom: '32px',
 };
 
 const steps = [
@@ -26,7 +27,7 @@ const steps = [
 
 const ThemedExample = () => (
   <ThemeProvider theme={otherFontTheme}>
-    <ChatBot steps={steps} floating={true} style={{  }} />
+    <ChatBot steps={steps} floating={true} />
   </ThemeProvider>
 );
 
