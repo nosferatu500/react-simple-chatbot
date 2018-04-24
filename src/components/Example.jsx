@@ -12,6 +12,7 @@ const otherFontTheme = {
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
+  left: '56px',
 };
 
 const steps = [

@@ -4,17 +4,18 @@ const FloatButton = styled.a`
   align-items: center;
   cursor: pointer;
   background: ${({ theme }) => theme.headerBgColor};
-  bottom: 32px;
+  bottom: ${({ theme }) => theme.floatBottom};
   border-radius: 100%;
   display: flex;
-  fill: ${({ theme }) => theme.background};
-  height: 56px;
+  fill: ${({ theme }) => theme.floatBackground};
+  height: ${({ theme }) => theme.floatHeight};
   justify-content: center;
   position: fixed;
-  left: 32px;
+  left: ${({ theme }) => theme.floatLeft};
+  right: ${({ theme }) => theme.floatRight};
   transform: ${props => props.opened ? 'scale(0)' : 'scale(1)'};
   transition: transform .3s ease;
-  width: 56px;
+  width: ${({ theme }) => theme.floatWidth};
   z-index: 999;
 `;
 
