@@ -44,6 +44,9 @@ const ThemedExample = () => (
       days={'this.state.secondDays'}
       time={'this.state.secondTime'}
       contact={'this.state.secondContact'}
+      footerStyle={{ marginLeft: '15px', marginRight: '15px', marginBottom: '20px' }}
+      inputStyle={{ borderRadius: '100px', marginTop: '20px' }}
+      submitButtonStyle={{ marginTop: '19px' }}
     />
   </ThemeProvider>
 );
